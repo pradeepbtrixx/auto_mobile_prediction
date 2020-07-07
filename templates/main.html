@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>blog page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">AUTO-MOBILE PREDICTION</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<br>
+<br>
+
+<div class="container-md p-3 my-3 bg-dark text-white">
+<div class="container-sm border p-3 my-3 bg-secondary text-dark">
+<p>©2020 PRADEEP KUMAR</p>
+<form action="{{ url_for('pri') }}"method="POST">
+    <div class="row">
+
+      <div class="col-sm-12"><div class="form-group">
+      <label for="sel1">company</label>
+      <select class="form-control" name="company" id="sel1">
+      <option>toyota</option>
+      <option>nissan</option>
+      <option>mazda</option>
+      <option>honda</option>
+      <option>mitsubishi</option>
+      <option>subaru</option>
+      <option>volkswagen</option>
+      <option>peugot</option>
+      <option>volvo</option>
+      <option>dodge</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">num-of-doors</label>
+      <select class="form-control" name="num_of_doors" id="sel1">
+      <option>2</option>
+      <option>4</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">height:</label>
+      <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="enter here" id="height" name="height">
+      <div class="input-group-append">
+      <span class="input-group-text">eg : 55.50</span>
+      </div></div></div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">num-of-cylinders</label>
+      <select class="form-control" name="num-of-cylinders" id="sel1">
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>8</option>
+      <option>12</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">stroke:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="enter here" id="stroke" name="stroke">
+      <div class="input-group-append">
+        <span class="input-group-text">eg : 3.39</span>
+      </div></div></div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">horsepower:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="enter here" id="horsepower" name="horsepower">
+      <div class="input-group-append">
+        <span class="input-group-text">eg
+      </div></div></div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">peak-rpm:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="enter here" id="peak-rpm" name="peak-rpm">
+      <div class="input-group-append">
+        <span class="input-group-text">eg : 5900</span>
+      </div></div></div></div>
+
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">city-mpg:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="enter here" id="city-mpg" name="city-mpg">
+      <div class="input-group-append">
+        <span class="input-group-text">eg : 21</span>
+      </div></div></div></div>
+
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="demo">highway-mpg:</label>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="enter here" id="highway-mpg" name="highway-mpg">
+      <div class="input-group-append">
+        <span class="input-group-text">eg : 28</span>
+      </div></div></div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">fuel-type</label>
+      <select class="form-control" name="fuel-type" id="sel1">
+      <option>gas</option>
+      <option>diesel</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">aspiration</label>
+      <select class="form-control" name="aspiration" id="sel1">
+      <option>turbo</option>
+      <option>std</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">engine-location</label>
+      <select class="form-control" name="engine-location" id="sel1">
+      <option>front</option>
+      <option>rear</option>
+      </select>
+      </div></div>
+
+      <div class="col-sm-6"><div class="form-group">
+      <label for="sel1">body-style</label>
+      <select class="form-control" name="body-style" id="sel1">
+      <option>convertible</option>
+      <option>hatchback</option>
+      <option>sedan</option>
+      <option>wagon</option>
+      <option>hardtop</option>
+      </select>
+      </div></div>
+
+    </div>
+
+
+  <div  class="container-sm-12 ">
+    <input type="submit" class="btn btn-info bg-warning" value="PREDICT">
+  </div>
+</form>
+
+
+</div>
+<div class="container">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%"></div>
+  </div>
+</div>
+
+<h2>PRICE  : $ {{val}}</h2>
+</div>
+
+</body>
+</html>
